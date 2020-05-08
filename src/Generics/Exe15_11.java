@@ -26,7 +26,8 @@ public class Exe15_11 {
     public static void f(Map<A, List<? extends B>> map) { }
 
     public static void main(String[] args) {
-        List<B> lb = New.<B>list();
+        List<B> lb = New.list();
+        List<C> lc = New.list();
         lb.add(new C());
         System.out.println(lb);
         Map<A, List<B>> m = New.map();
