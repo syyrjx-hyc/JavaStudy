@@ -17,7 +17,7 @@ public class LoggingExceptions {
         try{
             throw new LoggingException();
         } catch (LoggingException e) {
-            System.err.println("Caught"+e);
+            System.err.println("Caught "+e);
         }
     }
 }

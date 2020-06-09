@@ -1,17 +1,18 @@
 package Interfaces;
 
+class Run {}
+class FastRun extends Run {}
 
-import java.util.Random;
+interface move1 {
+    Run move();
+}
+interface move2 extends move1{
+    FastRun move();
+}
 
-interface Test{
-     Random RAND = new Random();
-     int i = RAND.nextInt();
+public class MyTest{
 
 }
 
-public class MyTest implements Test {
-    public static void main(String[] args) {
-        System.out.println(i);
 
-    }
-}
+

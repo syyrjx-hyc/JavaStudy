@@ -18,8 +18,6 @@ public class Exe12_14 {
     public static void main(String[] args) {
         try {
             sw.on();
-            // Code that can throw RuntimeException
-            // and leave Switch on:
             f(x[0]);
             sw.off();
         } catch(OnOffException1 e) {

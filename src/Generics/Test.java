@@ -1,20 +1,30 @@
 package Generics;
 
-import java.util.ArrayList;
-import java.util.List;
+interface Move<T> {
+    default void move() {
+        System.out.println("interface move1");
+    }
+}
 
-public class Test {
+class Animal2 implements Move<Animal2> {
+    public void move() {
+        System.out.println("animal move");
+    }
+}
 
-    public static void main(String[] args) throws Exception {
+public class Test extends Animal2 {
 
-        List<Integer> list = new ArrayList<>();
+    public void move() {
+        new Inner().move();
+    }
 
-        list.add(1);
+    static class Inner implements Move<Test> {
 
-        list.getClass().getMethod("add", Object.class).invoke(list, "asd");
+    }
 
-        System.out.println(list);
-
+    public static void main(String[] args) {
+        Test t = new Test();
+        t.move();
     }
 
 }
